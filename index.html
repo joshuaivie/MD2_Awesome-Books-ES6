@@ -8,6 +8,55 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <div>Awesome books</div>
+      <ul>
+        <li><a href="#" id="to-book-list-section">Book List</a></li>
+        <li><a href="#" id="to-new-book-section">Add Book</a></li>
+        <li><a href="#" id="to-contact-section">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="current-date"></div>
+  </header>
+  <section id="book-list-section">
+    <h2>All awesome books</h2>
+    <ul id="books-container">
+    </ul>
+  </section>
+  <hr>
+  <section id="add-book-section">
+    <h2>Add a new book</h2>
+    <form id="new-book-form">
+      <ul>
+        <li>
+          <input type="text" placeholder="Enter Book Title" id="newBookTitle" />
+        </li>
+        <li>
+          <input type="text" placeholder="Enter Book Author" id="new-book-author" />
+        </li>
+        <li>
+          <button id="add-button" type="button" id="add-new-book">Add</button>
+        </li>
+      </ul>
+    </form>
+  </section>
+  <section id="contact-section">
+    <h3>
+      Do you have any questions or you just want to say "Hello"?
+      You can reach out to us!
+    </h3>
+    <div>
+      <ul>
+        <li>Joshua Ivie</li>
+        <li>Github: joshuaivie</li>
+        <li>Email: joshuaivie.me@gmail.com</li>
+        <li>Phone: +2347054274316</li>
+      </ul>
+    </div>
+
+  </section>
+  <footer>&copy; Copyright <span id="current-year">2022</span> Joshua Ivie</footer>
   <script src="./index.js"></script>
 </body>
 </html>
