@@ -10,6 +10,15 @@ class BookHelpers {
     return updatedBooks;
   }
 
+  static RemoveBookEntry = (existingBooks, id) => {
+    const updatedBooks = existingBooks.map((book) => {
+      if (book.id === id) { book.deleted = true; }
+      return book;
+    });
+
+    return updatedBooks;
+  };
+
   static UpdateBookStore = (books) => {
     localStorage.setItem('books', JSON.stringify(books));
   };
@@ -31,7 +40,7 @@ class BookHelpers {
         booksList += `
         <li class="book" id="book-${book.id}">
         <div class='book-data'>"${book.title}" by ${book.author}</div>
-        <button class="removeButton" type="button" onclick="Methods.removeBook(${book.id})">Remove</button></li>
+        <button class="removeButton" type="button" id="remove-book-${book.id}">Remove</button></li>
       `;
       });
       bookContainer.innerHTML = booksList;

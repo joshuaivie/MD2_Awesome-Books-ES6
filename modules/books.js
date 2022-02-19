@@ -1,9 +1,9 @@
-import BookHelpers from "./bookHelpers.js"
+import BookHelpers from './bookHelpers.js';
 import {
   BookContainer,
   NewBookTitle,
   NewBookAuthor,
-} from './elements.js'
+} from './elements.js';
 
 const SetupBooks = () => {
   const books = BookHelpers.RetrieveBooks();
@@ -11,7 +11,6 @@ const SetupBooks = () => {
 };
 
 const AddBook = () => {
-  console.log(NewBookTitle.value);
   const newBookTitle = NewBookTitle.value;
   const newBookAuthor = NewBookAuthor.value;
   const currentBookList = BookHelpers.RetrieveBooks();
@@ -35,4 +34,11 @@ const AddBook = () => {
   return bookAdded;
 };
 
-export { SetupBooks, AddBook };
+const RemoveBook = (bookID) => {
+  const currentBookList = BookHelpers.RetrieveBooks();
+  const updatedBookList = BookHelpers.RemoveBookEntry(currentBookList, bookID);
+  BookHelpers.UpdateBookStore(updatedBookList);
+  BookHelpers.RenderBooks(updatedBookList, BookContainer);
+};
+
+export { SetupBooks, AddBook, RemoveBook };

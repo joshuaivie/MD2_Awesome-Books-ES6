@@ -1,21 +1,28 @@
 import { SetCurrentDate, SetCurrentYear } from './modules/date.js';
 import { HandleNavigation, RedirectToBookList } from './modules/navigation.js';
-import { AddBook, SetupBooks } from './modules/books.js'
+import { SetupBooks, AddBook, RemoveBook } from './modules/books.js';
 
 SetCurrentDate();
 SetCurrentYear();
 SetupBooks();
 
 document.body.addEventListener('click', (event) => {
-  if (event.target.parentElement.parentElement.id === 'main-navigation') {
+  const eventTarget = event.target;
+  const eventTargetID = `${event.target.id}`;
+
+  if (eventTarget.parentElement.parentElement.id === 'main-navigation') {
     event.preventDefault();
-    HandleNavigation(event.target);
-  } else if (event.target.id === 'add-book-button') {
+    HandleNavigation(eventTarget);
+  } else if (eventTargetID === 'add-book-button') {
     const success = AddBook();
     if (success) {
       RedirectToBookList();
     } else {
       alert('Please ensure you add a title and an author');
     }
+  } else if (eventTargetID.includes('remove-book-')) {
+    const eventTargetIDArray = eventTargetID.split('-');
+    const bookID = parseInt(eventTargetIDArray[eventTargetIDArray.length - 1], 10);
+    RemoveBook(bookID);
   }
 });

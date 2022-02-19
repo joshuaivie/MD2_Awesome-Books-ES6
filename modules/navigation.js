@@ -47,7 +47,7 @@ const updateNavigationStyle = (elementID) => {
     default:
       break;
   }
-}
+};
 
 const RedirectToBookList = () => {
   BookListSection.style.display = 'inherit';
