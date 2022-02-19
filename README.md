@@ -2,7 +2,7 @@
 
 # Awesome Books ES6
 
-![screenshot](./images/screenshot.png)
+![screenshot](./assets/images/screenshot.png)
 
 > This is a demo project that helps to manage book records. It explores the use of es6 syntax and modules in JavaScript
 
@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://joshuaivie.github.io/MD2_Awesome-Books-ES6/)
 
 ## Getting Started
 
