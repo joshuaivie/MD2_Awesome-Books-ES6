@@ -1,9 +1,9 @@
 {
-  "name": "my-personal-portfolio",
+  "name": "awesome-books-es6",
   "version": "1.0.0",
-  "description": "A portfolio of my work.",
+  "description": "This is a demo project that helps to manage book records. It explores the use of es6 syntax and modules in JavaScript.",
   "author": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +19,8 @@
     "stylelint-config-standard": "^25.0.0",
     "stylelint-csstree-validator": "^2.0.0",
     "stylelint-scss": "^4.1.0"
+  },
+  "dependencies": {
+    "luxon": "^2.3.0"
   }
 }
