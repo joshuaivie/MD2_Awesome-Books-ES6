@@ -5,6 +5,13 @@ body {
   max-width: 800px;
   font-weight: 500;
   font-family: Verdana, sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+main {
+  padding-bottom: 5rem;
 }
 
 h1,
@@ -29,7 +36,7 @@ a {
 
 button {
   border: 2px solid black;
-  box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 3px 1px rgb(0 0 0 /50%);
   padding: 0.25rem 1rem;
   cursor: pointer;
 }
@@ -86,6 +93,10 @@ button {
   padding: 2rem 0;
 }
 
+.book-list-section {
+  display: initial;
+}
+
 .book-list-section .book-container {
   display: flex;
   flex-direction: column;
@@ -110,19 +121,23 @@ button {
   font-weight: 600;
 }
 
-.new-book-form {
+.add-book-section {
+  display: none;
+}
+
+.add-book-section .new-book-form {
   width: 100%;
   margin: auto;
 }
 
-.new-book-form input {
+.add-book-section .new-book-form input {
   border: 2px solid black;
-    padding: 0.5rem;
-    width: 100%;
-    box-sizing: border-box;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.new-book-form ul {
+.add-book-section .new-book-form ul {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -132,13 +147,14 @@ button {
   max-width: 500px;
 }
 
-.new-book-form ul li {
+.add-book-section .new-book-form ul li {
   margin-bottom: 0.5rem;
   display: flex;
   justify-content: flex-end;
 }
 
 .contact-section {
+  display: none;
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -153,7 +169,12 @@ button {
   align-items: center;
   justify-content: flex-start;
   padding: 1rem 3rem;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 1rem;
 }
+
 @media screen and (max-width: 768px) {
   body {
     width: unset;

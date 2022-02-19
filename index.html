@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,63 +8,68 @@
   <title>Awesome Books</title>
   <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
   <header>
     <nav class="container main-navigation">
       <div class="brand">Awesome Books</div>
-      <ul class="navigation-list">
-        <li class="navigation-item"><a class="link active" href="book-list" id="to-book-list-section">Book List</a></li>
-        <li class="navigation-item"><a class="link" href="new-book" id="to-new-book-section">Add Book</a></li>
-        <li class="navigation-item"><a class="link" href="contact" id="to-contact-section">Contact</a></li>
+      <ul class="navigation-list" id="main-navigation">
+        <li class="navigation-item"><a class="link active" href="book-list" id="book-list-section-link">Book List</a>
+        </li>
+        <li class="navigation-item"><a class="link" href="new-book" id="new-book-section-link">Add Book</a></li>
+        <li class="navigation-item"><a class="link" href="contact" id="contact-section-link">Contact</a></li>
       </ul>
     </nav>
     <div class="current-date" id="current-date"></div>
   </header>
-  <section class="book-list-section" id="book-list-section">
-    <h2 class="section-title">All Awesome Books</h2>
-    <ul class="container book-container" id="book-container">
-      <li class="book">
-        <span class="book-title">"${book.title}" by ${book.author}</span>
-        <button type="button">Remove</button>
-      </li>
-      <li class="book">
-        <span class="book-title">"${book.title}" by ${book.author}</span>
-        <button type="button">Remove</button>
-      </li>
-    </ul>
-  </section>
-  <section class="add-book-section" id="add-book-section">
-    <h2 class="section-title">Add a New Book</h2>
-    <form class="new-book-form" id="new-book-form">
-      <ul>
-        <li>
-          <input type="text" placeholder="Enter Book Title" id="newBookTitle" />
+  <main>
+    <section class="book-list-section" id="book-list-section">
+      <h2 class="section-title">All Awesome Books</h2>
+      <ul class="container book-container" id="book-container">
+        <li class="book">
+          <span class="book-title">"${book.title}" by ${book.author}</span>
+          <button type="button">Remove</button>
         </li>
-        <li>
-          <input type="text" placeholder="Enter Book Author" id="new-book-author" />
-        </li>
-        <li>
-          <button id="add-button" type="button" id="add-new-book">Add Book</button>
+        <li class="book">
+          <span class="book-title">"${book.title}" by ${book.author}</span>
+          <button type="button">Remove</button>
         </li>
       </ul>
-    </form>
-  </section>
-  <section class="contact-section" id="contact-section">
-    <h3 class="contact-message">
-      Do you have any questions or you just want to say "Hello"?
-      You can reach out to me!
-    </h3>
-    <div>
-      <ul>
-        <li>Joshua Ivie</li>
-        <li>Github: joshuaivie</li>
-        <li>Email: joshuaivie.me@gmail.com</li>
-        <li>Phone: +2347054274316</li>
-      </ul>
-    </div>
+    </section>
+    <section class="add-book-section" id="add-book-section">
+      <h2 class="section-title">Add a New Book</h2>
+      <form class="new-book-form" id="new-book-form">
+        <ul>
+          <li>
+            <input type="text" placeholder="Enter Book Title" id="newBookTitle" />
+          </li>
+          <li>
+            <input type="text" placeholder="Enter Book Author" id="new-book-author" />
+          </li>
+          <li>
+            <button id="add-button" type="button" id="add-new-book">Add Book</button>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <section class="contact-section" id="contact-section">
+      <h3 class="contact-message">
+        Do you have any questions or you just want to say "Hello"?
+        You can reach out to me!
+      </h3>
+      <div>
+        <ul>
+          <li>Joshua Ivie</li>
+          <li>Github: joshuaivie</li>
+          <li>Email: joshuaivie.me@gmail.com</li>
+          <li>Phone: +2347054274316</li>
+        </ul>
+      </div>
 
-  </section>
-  <footer class="container footer">&copy; Copyright&nbsp;<span id="current-year">2022</span>&nbsp;Joshua Ivie</footer>
-  <script src="./index.js"></script>
+    </section>
+  </main>
+  <footer class="container footer">&copy; Copyright&nbsp;<span id="current-year"></span>&nbsp;Joshua Ivie</footer>
+  <script src="./index.js" type="module"></script>
 </body>
+
 </html>
