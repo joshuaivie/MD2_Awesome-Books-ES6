@@ -6,6 +6,9 @@ const ContactSection = document.getElementById('contact-section');
 const BookListSectionLink = document.getElementById('book-list-section-link');
 const NewBookSectionLink = document.getElementById('new-book-section-link');
 const ContactSectionLink = document.getElementById('contact-section-link');
+const BookContainer = document.getElementById('book-container');
+const NewBookTitle = document.getElementById('new-book-title');
+const NewBookAuthor = document.getElementById('new-book-author');
 
 export {
   CurrentDateElement,
@@ -16,4 +19,7 @@ export {
   BookListSectionLink,
   NewBookSectionLink,
   ContactSectionLink,
+  BookContainer,
+  NewBookTitle,
+  NewBookAuthor,
 };

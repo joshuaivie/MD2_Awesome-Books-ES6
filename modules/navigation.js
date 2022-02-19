@@ -49,10 +49,16 @@ const updateNavigationStyle = (elementID) => {
   }
 }
 
-  const HandleNavigation = (element) => {
-    const elementID = element.id;
-    updateNavigationStyle(elementID);
-    updateSectionsDisplay(elementID);
-  };
+const RedirectToBookList = () => {
+  BookListSection.style.display = 'inherit';
+  AddBookSection.style.display = 'none';
+  ContactSection.style.display = 'none';
+};
 
-  export default HandleNavigation;
+const HandleNavigation = (element) => {
+  const elementID = element.id;
+  updateNavigationStyle(elementID);
+  updateSectionsDisplay(elementID);
+};
+
+export { RedirectToBookList, HandleNavigation };
