@@ -9,25 +9,32 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div>Awesome books</div>
-      <ul>
-        <li><a href="#" id="to-book-list-section">Book List</a></li>
-        <li><a href="#" id="to-new-book-section">Add Book</a></li>
-        <li><a href="#" id="to-contact-section">Contact</a></li>
+    <nav class="container main-navigation">
+      <div class="brand">Awesome Books</div>
+      <ul class="navigation-list">
+        <li class="navigation-item"><a class="link active" href="book-list" id="to-book-list-section">Book List</a></li>
+        <li class="navigation-item"><a class="link" href="new-book" id="to-new-book-section">Add Book</a></li>
+        <li class="navigation-item"><a class="link" href="contact" id="to-contact-section">Contact</a></li>
       </ul>
     </nav>
-    <div id="current-date"></div>
+    <div class="current-date" id="current-date"></div>
   </header>
-  <section id="book-list-section">
-    <h2>All awesome books</h2>
-    <ul id="books-container">
+  <section class="book-list-section" id="book-list-section">
+    <h2 class="section-title">All Awesome Books</h2>
+    <ul class="container book-container" id="book-container">
+      <li class="book">
+        <span class="book-title">"${book.title}" by ${book.author}</span>
+        <button type="button">Remove</button>
+      </li>
+      <li class="book">
+        <span class="book-title">"${book.title}" by ${book.author}</span>
+        <button type="button">Remove</button>
+      </li>
     </ul>
   </section>
-  <hr>
-  <section id="add-book-section">
-    <h2>Add a new book</h2>
-    <form id="new-book-form">
+  <section class="add-book-section" id="add-book-section">
+    <h2 class="section-title">Add a New Book</h2>
+    <form class="new-book-form" id="new-book-form">
       <ul>
         <li>
           <input type="text" placeholder="Enter Book Title" id="newBookTitle" />
@@ -36,15 +43,15 @@
           <input type="text" placeholder="Enter Book Author" id="new-book-author" />
         </li>
         <li>
-          <button id="add-button" type="button" id="add-new-book">Add</button>
+          <button id="add-button" type="button" id="add-new-book">Add Book</button>
         </li>
       </ul>
     </form>
   </section>
-  <section id="contact-section">
-    <h3>
+  <section class="contact-section" id="contact-section">
+    <h3 class="contact-message">
       Do you have any questions or you just want to say "Hello"?
-      You can reach out to us!
+      You can reach out to me!
     </h3>
     <div>
       <ul>
@@ -56,7 +63,7 @@
     </div>
 
   </section>
-  <footer>&copy; Copyright <span id="current-year">2022</span> Joshua Ivie</footer>
+  <footer class="container footer">&copy; Copyright&nbsp;<span id="current-year">2022</span>&nbsp;Joshua Ivie</footer>
   <script src="./index.js"></script>
 </body>
 </html>
