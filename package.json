@@ -1,10 +1,12 @@
 {
-  "name": "my-personal-portfolio",
+  "name": "awesome-books-es6",
   "version": "1.0.0",
-  "description": "A portfolio of my work.",
+  "description": "This is a demo project that helps to manage book records. It explores the use of es6 syntax and modules in JavaScript.",
   "author": "",
-  "main": "index.js",
+  "source": "index.html",
   "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,9 +17,13 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.4",
     "lighthouse": "^9.3.1",
+    "parcel": "^2.3.2",
     "stylelint": "^14.4.0",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-csstree-validator": "^2.0.0",
     "stylelint-scss": "^4.1.0"
+  },
+  "dependencies": {
+    "luxon": "^2.3.0"
   }
 }

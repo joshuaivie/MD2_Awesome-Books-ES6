@@ -1,0 +1,216 @@
+body {
+  margin: 0 auto;
+  padding: 1rem 0;
+  width: 80%;
+  max-width: 800px;
+  font-weight: 500;
+  font-family: Verdana, sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+main {
+  padding-bottom: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none !important;
+  padding: 0;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  color: #666;
+}
+
+button {
+  border: 2px solid black;
+  box-shadow: 2px 2px 3px 1px rgb(0 0 0 /50%);
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+}
+
+.container {
+  border: 2px solid black;
+}
+
+.main-navigation {
+  display: flex;
+  margin: 0.5rem auto;
+  padding: 0 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-navigation .brand {
+  font-weight: 700;
+  flex: 1;
+}
+
+.main-navigation .navigation-list {
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.main-navigation .navigation-list .navigation-item {
+  padding: 0 1rem;
+}
+
+.main-navigation .navigation-list .navigation-item:last-of-type {
+  padding-right: 0;
+}
+
+.main-navigation .navigation-list .navigation-item + .navigation-item {
+  border-left: 1px solid #ccc;
+}
+
+.main-navigation .navigation-list .navigation-item .link:hover,
+.main-navigation .navigation-list .navigation-item .link.active {
+  color: #000;
+}
+
+.current-date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.book-list-section,
+.add-book-section,
+.contact-section {
+  padding: 2rem 0;
+}
+
+.book-list-section {
+  display: initial;
+}
+
+.book-list-section .book-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.book-list-section .book-container :nth-child(even) {
+  background-color: #e1e1e1;
+}
+
+.book-list-section .book-container .book {
+  max-height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  align-items: center;
+  padding: 1rem 2.5rem;
+}
+
+.book-list-section .book-container .book .book-title {
+  font-weight: 600;
+}
+
+.add-book-section {
+  display: none;
+}
+
+.add-book-section .new-book-form {
+  width: 100%;
+  margin: auto;
+}
+
+.add-book-section .new-book-form input {
+  border: 2px solid black;
+  padding: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-book-section .new-book-form ul {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 70%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.add-book-section .new-book-form ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-section {
+  display: none;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.contact-section .contact-message {
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  margin: 0.5rem auto;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 3rem;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: unset;
+    padding: 1rem 2rem;
+  }
+
+  .new-book-form {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-navigation {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: normal;
+    padding: 1rem;
+  }
+
+  .main-navigation .navigation-list .navigation-item:last-of-type {
+    padding-right: 1rem;
+  }
+
+  .book-list-section .book-container .book {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .book-list-section .book-container .book .book-title {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .new-book-form ul {
+    width: 100%;
+  }
+}
